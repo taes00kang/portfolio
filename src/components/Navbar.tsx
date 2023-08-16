@@ -1,20 +1,17 @@
 export const Navbar: React.FC = () => {
+  const menu = ['home', 'about', 'projects', 'contact'];
   return (
-    <div className="fixed w-full flex items-center justify-between px-12 py-6 shadow-md shadow-grey-400 bg-white">
+    <div className="fixed z-10 w-full flex items-center justify-between px-12 py-6 shadow-md shadow-grey-400 bg-white">
       <div className="font-bold text-xl">Taesoo.Kang</div>
       <ul className="flex gap-6 items-center font-semibold text-lg">
-        <li>
-          <a href="./">Home</a>
-        </li>
-        <li>
-          <a href="./">About</a>
-        </li>
-        <li>
-          <a href="./">Project</a>
-        </li>
-        <li>
-          <a href="./">Contact</a>
-        </li>
+        {menu.map((m) => (
+          <li
+            key={m}
+            className="hover:text-brand-blue transition-colors duration-200 ease-in capitalize"
+          >
+            <a href={`#${m}`}>{m}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );

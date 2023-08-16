@@ -29,9 +29,15 @@ export default {
             borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
           },
         },
+        'spin-slow': {
+          to: {
+            transform: 'rotate(360deg)',
+          },
+        },
       },
       animation: {
         morph: 'morph 8s ease-in-out infinite',
+        'spin-slow': 'spin-slow 6s linear infinite',
       },
     },
   },

@@ -1,4 +1,5 @@
-import { Navbar, Hero } from './components';
+import { Navbar } from './components';
+import { Hero, About, Portfolio, Contact } from './sections';
 
 export function App() {
   return (
@@ -7,10 +8,12 @@ export function App() {
       <Navbar />
       {/* Hero */}
       <Hero />
-
       {/* About  */}
+      <About />
       {/* Portfolio  */}
+      <Portfolio />
       {/* Contact  */}
+      <Contact />
       {/* Footer */}
     </>
   );
