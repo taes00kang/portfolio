@@ -14,6 +14,7 @@ export default {
       colors: {
         brand: {
           black: '#2D2E32',
+          blue: '#147EFB',
         },
       },
       keyframes: {
