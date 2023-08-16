@@ -1,5 +1,19 @@
+import { Navbar, Hero } from './components';
+
 export function App() {
-  return <div className="">hello</div>;
+  return (
+    <>
+      {/* Navbar */}
+      <Navbar />
+      {/* Hero */}
+      <Hero />
+
+      {/* About  */}
+      {/* Portfolio  */}
+      {/* Contact  */}
+      {/* Footer */}
+    </>
+  );
 }
 
 export default App;

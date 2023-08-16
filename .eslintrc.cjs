@@ -22,7 +22,10 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/button-has-type': 0,
+    'react/function-component-definition': 0,
     '@typescript-eslint/no-shadow': 0,
     'import/extensions': 0,
+    'import/no-named-as-default': 0,
+    'import/prefer-default-export': 0,
   },
 };
