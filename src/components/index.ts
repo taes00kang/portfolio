@@ -3,3 +3,4 @@ export { default as Navbar } from './Navbar';
 export { default as Section } from './Section';
 export { default as HeadingBlue } from './HeadingBlue';
 export { default as HeadingBlack } from './HeadingBlack';
+export { default as ProjectCard } from './ProjectCard';

@@ -1,4 +1,4 @@
-import { Section } from '../components';
+import { HeadingBlue, Section } from '../components';
 import stacks from '../constants/stacks';
 
 export const Hero: React.FC = () => {
@@ -21,15 +21,16 @@ export const Hero: React.FC = () => {
         </div>
         {/* Hero Image */}
         <div className="flex-[.8] flex items-center justify-center">
-          <div className="w-4/5 aspect-square  border-brand-black border-4 animate-morph bg-avatar bg-no-repeat bg-cover" />
+          <div className="w-4/5 aspect-square  border-brand-black border-2 animate-morph bg-avatar bg-no-repeat bg-cover" />
         </div>
       </div>
       {/* Stacks */}
       <div className="flex w-full items-center md:flex-row flex-col mb-20">
-        <div className="pr-8 mr-8 py-2 text-lg font-mulish md:border-r border-brand-black">
+        {/* <div className="pr-8 mr-8 py-2 text-lg font-mulish md:border-r border-brand-black">
           My GoTo Stacks
-        </div>
-        <ul className="flex gap-4">
+        </div> */}
+        <HeadingBlue text="my goto stacks" />
+        <ul className="flex gap-4 ml-8">
           {stacks.map((stack) => (
             <li key={stack.name}>
               <img
