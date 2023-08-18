@@ -1,29 +1,24 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import { FaEnvelopeOpenText, FaLinkedin } from 'react-icons/fa';
-import { Section, HeadingBlue, HeadingBlack } from '../components';
+import { Section, HeadingBlue, HeadingBlack, ContactItem } from '../components';
+import { ContactItemProps } from '../constants/interfaces';
 
-interface ContactItemProps {
-  name: string;
-  link: string;
-  caption: string;
-  icon: JSX.Element;
-}
+const contacts: ContactItemProps[] = [
+  {
+    name: 'email',
+    link: 'mailto:taesoo.dev@gmail.com',
+    caption: 'Wanna say "Hi" to me?',
+    icon: <FaEnvelopeOpenText />,
+  },
+  {
+    name: 'linkedin',
+    link: 'https://www.linkedin.com/in/taesoo-kang',
+    caption: "Let's get connected!",
+    icon: <FaLinkedin />,
+  },
+];
 
 export const Contact: React.FC = () => {
-  const contacts: ContactItemProps[] = [
-    {
-      name: 'email',
-      link: 'mailto:taesoo.dev@gmail.com',
-      caption: 'Wanna say "Hi" to me?',
-      icon: <FaEnvelopeOpenText />,
-    },
-    {
-      name: 'linkedin',
-      link: 'https://www.linkedin.com/in/taesoo-kang',
-      caption: "Let's get connected!",
-      icon: <FaLinkedin />,
-    },
-  ];
   return (
     <Section id="contact" className="py-12" removeScreenHeight>
       <HeadingBlue text="contact" />
@@ -40,32 +35,6 @@ export const Contact: React.FC = () => {
         ))}
       </div>
     </Section>
-  );
-};
-
-const ContactItem: React.FC<ContactItemProps> = ({
-  name,
-  link,
-  caption,
-  icon,
-}) => {
-  return (
-    <div className="flex items-center gap-6 sm:gap-4">
-      <div className="w-20 aspect-square flex items-center justify-center text-brand-blue shadow-md shadow-gray-300 rounded-full text-3xl">
-        {icon}
-      </div>
-      <div className="flex flex-col">
-        <span className="capitalize font-bold text-lg">{name}</span>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={link}
-          className="text-brand-black/40 hover:text-brand-blue transition-colors duration-200 ease-in"
-        >
-          {caption}
-        </a>
-      </div>
-    </div>
   );
 };
 

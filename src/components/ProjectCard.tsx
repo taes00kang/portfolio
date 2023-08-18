@@ -1,6 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-
 import { Project } from '../constants/interfaces';
+import { LinkButton } from './LinkButton';
 
 interface Props {
   project: Project;
@@ -36,28 +36,12 @@ export const ProjectCard: React.FC<Props> = ({ project }) => {
           </ul>
         </div>
         <div className="w-full flex flex-col sm:flex-row items-center gap-4 font-mulish text-brand-black/60 py-4">
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noreferrer"
-            className="w-full text-lg flex items-center justify-center flex-1 py-4 sm:py-2 shadow-md shadow-gray-300 rounded-md gap-2 hover:bg-brand-blue hover:text-white transition-colors duration-200"
-          >
-            Code{' '}
-            <div className="text-2xl">
-              <FaGithub />
-            </div>
-          </a>
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="w-full text-lg flex items-center justify-center flex-1 py-4 sm:py-2 shadow-md shadow-gray-300 rounded-md gap-2 hover:bg-brand-blue hover:text-white transition-colors duration-200"
-          >
-            Demo{' '}
-            <div className="text-2xl">
-              <FaExternalLinkAlt />
-            </div>
-          </a>
+          <LinkButton link={project.repo} name="code" icon={<FaGithub />} />
+          <LinkButton
+            link={project.demo}
+            name="demo"
+            icon={<FaExternalLinkAlt />}
+          />
         </div>
       </div>
     </div>
