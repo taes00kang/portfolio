@@ -21,7 +21,9 @@ export const Section: React.FC<Props> = ({
         !removeScreenHeight && 'min-h-screen'
       }`}
     >
-      <div className={`container w-full max-w-[1000px] ${className}`}>
+      <div
+        className={`container w-full h-full md:h-auto max-w-[1000px] ${className} px-8 lg:px-0`}
+      >
         {children}
       </div>
     </section>

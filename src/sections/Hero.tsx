@@ -8,29 +8,26 @@ export const Hero: React.FC = () => {
       className="flex flex-col items-center justify-center"
       bgGray
     >
-      <div className="flex flex-grow w-full items-center pt-24">
+      <div className="flex flex-grow w-full items-center pt-24 flex-col-reverse md:flex-row">
         {/* Hero text */}
-        <div className="flex-1 flex flex-col justify-center gap-8">
-          <h1 className="text-6xl font-bold w-full leading-tight">
+        <div className="flex-1 flex flex-col justify-center gap-8 px-4 sm:px-24 md:px-0 my-12 md:my-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold w-full leading-tight text-center md:text-left">
             Front-End React Developer 👋🏼
           </h1>
-          <p className="text-brand-black/60 font-medium text-lg leading-relaxed">
+          <p className="text-brand-black/60 font-medium text-base md:text-lg leading-relaxed text-center md:text-left">
             Hi, I&apos;m Taesoo. A passionate Front-end React Developer based in
             New York. 📍
           </p>
         </div>
         {/* Hero Image */}
-        <div className="flex-[.8] flex items-center justify-center">
-          <div className="w-4/5 aspect-square  border-brand-black border-2 animate-morph bg-avatar bg-no-repeat bg-cover" />
+        <div className="flex-[.8] flex items-center justify-center w-full">
+          <div className=" sm:max-md:w-1/2 w-4/5 aspect-square border-brand-black border-2 animate-morph bg-avatar bg-no-repeat bg-cover" />
         </div>
       </div>
       {/* Stacks */}
-      <div className="flex w-full items-center md:flex-row flex-col mb-20">
-        {/* <div className="pr-8 mr-8 py-2 text-lg font-mulish md:border-r border-brand-black">
-          My GoTo Stacks
-        </div> */}
+      <div className="flex w-full items-center md:flex-row flex-col mb-20 whitespace-nowrap">
         <HeadingBlue text="my goto stacks" />
-        <ul className="flex gap-4 ml-8">
+        <ul className="flex gap-4 flex-wrap ml-0 md:ml-8 mt-6 md:mt-0 justify-center">
           {stacks.map((stack) => (
             <li key={stack.name}>
               <img

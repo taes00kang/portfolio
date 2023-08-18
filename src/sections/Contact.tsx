@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
     <Section id="contact" className="py-12" removeScreenHeight>
       <HeadingBlue text="contact" />
       <HeadingBlack text="Don't be shy! Hit me up! 👇🏼" />
-      <div className="flex items-center gap-12 my-8">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-12 my-8">
         {contacts.map((contact) => (
           <ContactItem
             key={contact.name}
@@ -50,7 +50,7 @@ const ContactItem: React.FC<ContactItemProps> = ({
   icon,
 }) => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-6 sm:gap-4">
       <div className="w-20 aspect-square flex items-center justify-center text-brand-blue shadow-md shadow-gray-300 rounded-full text-3xl">
         {icon}
       </div>

@@ -3,7 +3,7 @@ import projects from '../constants/projects';
 
 export const Portfolio: React.FC = () => {
   return (
-    <Section id="projects" className="flex flex-col py-36" bgGray>
+    <Section id="projects" className="flex flex-col py-24 md:py-36" bgGray>
       <div className="mb-12 w-full flex flex-col">
         <HeadingBlue text="portfolio" />
         <HeadingBlack text="Venture through my code gallery 🎨" />
