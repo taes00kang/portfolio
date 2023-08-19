@@ -4,7 +4,7 @@ interface Props {
 
 export const HeadingBlue: React.FC<Props> = ({ text }) => {
   return (
-    <h3 className="uppercase text-brand-blue text-base sm:text-lg font-bold">
+    <h3 className="text-base font-bold uppercase text-brand-blue sm:text-lg">
       {text}
     </h3>
   );

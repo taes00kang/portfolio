@@ -10,7 +10,7 @@ export const LinkButton: React.FC<Props> = ({ link, name, icon }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="capitalize w-full text-lg flex items-center justify-center flex-1 py-4 sm:py-2 shadow-md shadow-gray-300 rounded-md gap-2 hover:bg-brand-blue hover:text-white transition-colors duration-200"
+      className="flex w-full flex-1 items-center justify-center gap-2 rounded-md py-4 text-lg capitalize shadow-md shadow-gray-300 transition-colors duration-200 hover:bg-brand-blue hover:text-white sm:py-2"
     >
       {name} <div className="text-2xl">{icon}</div>
     </a>

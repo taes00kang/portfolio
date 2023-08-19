@@ -6,18 +6,18 @@ import laptop from '../assets/images/laptop.jpeg';
 export const About: React.FC = () => {
   return (
     <Section id="about" className="flex items-center justify-center">
-      <div className="flex h-1/2 flex-col md:flex-row gap-12 lg:gap-24 py-24 md:py-0">
+      <div className="flex h-1/2 flex-col gap-12 py-24 md:flex-row md:py-0 lg:gap-24">
         {/* Images */}
-        <div className="flex flex-1 relative">
+        <div className="relative flex flex-1">
           {/* Main image */}
           <img
-            className="w-full object-cover object-center rounded-xl"
+            className="w-full rounded-xl object-cover object-center"
             src={laptop}
             alt="laptop coffee desk"
           />
           {/* Spinning image */}
-          <div className="absolute -bottom-16 md:-bottom-8 -right-4 md:-right-8 w-40 lg:w-52 aspect-square bg-white rounded-full">
-            <div className="relative w-full h-full flex items-center justify-center">
+          <div className="absolute -bottom-16 -right-4 aspect-square w-40 rounded-full bg-white md:-bottom-8 md:-right-8 lg:w-52">
+            <div className="relative flex h-full w-full items-center justify-center">
               <img
                 src={textRing}
                 alt="text frontend developer"
@@ -26,16 +26,16 @@ export const About: React.FC = () => {
               <img
                 src={coder}
                 alt="coder"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 lg:w-16 aspect-square"
+                className="absolute left-1/2 top-1/2 aspect-square w-12 -translate-x-1/2 -translate-y-1/2 lg:w-16"
               />
             </div>
           </div>
         </div>
         {/* Text */}
-        <div className="flex flex-col flex-1 mt-12 md:mt-0">
+        <div className="mt-12 flex flex-1 flex-col md:mt-0">
           <HeadingBlue text="about me" />
           <HeadingBlack text="A dedicated Front-end Developer based in NY 📍" />
-          <p className="text-brand-black/60 text-sm sm:text-base leading-loose sm:leading-relaxed">
+          <p className="text-sm leading-loose text-brand-black/60 sm:text-base sm:leading-relaxed">
             Bringing a sincere love for web technologies and solid skills in
             React JS, I&apos;m thrilled to offer my expertise to an innovative
             organization. With hands-on UX/UI development experience, I&apos;m

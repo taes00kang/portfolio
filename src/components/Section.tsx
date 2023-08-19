@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 interface Props {
   id: string;
   children: React.ReactNode;
@@ -17,12 +16,12 @@ export const Section: React.FC<Props> = ({
   return (
     <section
       id={id}
-      className={`w-full flex justify-center ${bgGray && 'bg-gray-100'} ${
+      className={`flex w-full justify-center ${bgGray && 'bg-gray-100'} ${
         !removeScreenHeight && 'min-h-screen'
       }`}
     >
       <div
-        className={`container w-full h-full md:h-auto max-w-[1000px] ${className} px-8 lg:px-0`}
+        className={`container h-full w-full max-w-[1000px] md:h-auto ${className} px-8 lg:px-0`}
       >
         {children}
       </div>

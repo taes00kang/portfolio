@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import { FaEnvelopeOpenText, FaLinkedin } from 'react-icons/fa';
 import { Section, HeadingBlue, HeadingBlack, ContactItem } from '../components';
 import { ContactItemProps } from '../constants/interfaces';
@@ -23,7 +22,7 @@ export const Contact: React.FC = () => {
     <Section id="contact" className="py-12" removeScreenHeight>
       <HeadingBlue text="contact" />
       <HeadingBlack text="Don't be shy! Hit me up! 👇🏼" />
-      <div className="flex flex-col sm:flex-row sm:items-center gap-12 my-8">
+      <div className="my-8 flex flex-col gap-12 sm:flex-row sm:items-center">
         {contacts.map((contact) => (
           <ContactItem
             key={contact.name}

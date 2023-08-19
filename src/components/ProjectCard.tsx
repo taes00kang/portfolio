@@ -8,34 +8,34 @@ interface Props {
 
 export const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row gap-6 h-full lg:h-[400px] bg-white shadow-md shadow-gray-200 rounded-xl p-4 sm:p-8">
+    <div className="flex h-full w-full flex-col gap-6 rounded-xl bg-white p-4 shadow-md shadow-gray-200 sm:p-8 lg:h-[400px] lg:flex-row">
       {/* Project image */}
-      <div className="group w-full lg:max-w-[530px] aspect-[16/9] lg:h-full overflow-hidden rounded-xl shadow-md shadow-gray-200">
+      <div className="group aspect-[16/9] w-full overflow-hidden rounded-xl shadow-md shadow-gray-200 lg:h-full lg:max-w-[530px]">
         <img
           src={project.image}
           alt={project.id}
-          className="overflow-clip group-hover:-translate-y-[92%] duration-[16000ms] ease-in-out"
+          className="overflow-clip duration-[16000ms] ease-in-out group-hover:-translate-y-[92%]"
         />
       </div>
       {/* Project Info */}
-      <div className="flex flex-1 w-full flex-col items-center px-4 md:px-8 md:py-4">
-        <p className="text-xl lg:text-lg font-bold">{project.name}</p>
-        <div className="flex flex-col flex-grow w-full py-8 lg:py-4 ">
-          <p className="text-brand-black/60 leading-relaxed text-sm md:text-base">
+      <div className="flex w-full flex-1 flex-col items-center px-4 md:px-8 md:py-4">
+        <p className="text-xl font-bold lg:text-lg">{project.name}</p>
+        <div className="flex w-full flex-grow flex-col py-8 lg:py-4 ">
+          <p className="text-sm leading-relaxed text-brand-black/60 md:text-base">
             {project.desc}
           </p>
-          <ul className="w-full pt-4 flex gap-2 flex-wrap">
+          <ul className="flex w-full flex-wrap gap-2 pt-4">
             {project.stacks.map((stack) => (
               <li
                 key={stack}
-                className="py-1 px-3 rounded-full bg-brand-black text-white text-xs md:text-sm"
+                className="rounded-full bg-brand-black px-3 py-1 text-xs text-white md:text-sm"
               >
                 {stack}
               </li>
             ))}
           </ul>
         </div>
-        <div className="w-full flex flex-col sm:flex-row items-center gap-4 font-mulish text-brand-black/60 py-4">
+        <div className="flex w-full flex-col items-center gap-4 py-4 font-mulish text-brand-black/60 sm:flex-row">
           <LinkButton link={project.repo} name="code" icon={<FaGithub />} />
           <LinkButton
             link={project.demo}

@@ -15,17 +15,17 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="fixed z-10 w-full flex items-center justify-between px-8 sm:px-12 py-4 sm:py-6 shadow-md shadow-grey-400 bg-white">
-      <div className="font-bold text-lg md:text-xl">Taesoo.Kang</div>
+    <div className="shadow-grey-400 fixed z-10 flex w-full items-center justify-between bg-white px-8 py-4 shadow-md sm:px-12 sm:py-6">
+      <div className="text-lg font-bold md:text-xl">Taesoo.Kang</div>
       <ul
-        className={`max-md:absolute max-md:z-20 top-0 -left-full max-md:w-full max-md:h-screen max-md:bg-white flex max-md:flex-col gap-6 max-md:gap-12 items-center max-md:justify-center font-semibold text-lg max-md:transition-transform ease-in duration-300 ${
+        className={`-left-full top-0 flex items-center gap-6 text-lg font-semibold duration-300 ease-in max-md:absolute max-md:z-20 max-md:h-screen max-md:w-full max-md:flex-col max-md:justify-center max-md:gap-12 max-md:bg-white max-md:transition-transform ${
           menuOpen && 'max-md:translate-x-full'
         }`}
       >
         {menu.map((m) => (
           <li key={m}>
             <button
-              className="w-full hover:text-brand-blue transition-colors duration-200 ease-in capitalize max-md:text-xl"
+              className="w-full capitalize transition-colors duration-200 ease-in hover:text-brand-blue max-md:text-xl"
               onClick={() => {
                 scrollToSection(`${m}`);
                 setMenuOpen(false);
@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
         {/* Mobile menu close button */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute md:hidden top-6 right-12 max-sm:top-4 max-sm:right-6 text-3xl hover:text-brand-blue"
+          className="absolute right-12 top-6 text-3xl hover:text-brand-blue max-sm:right-6 max-sm:top-4 md:hidden"
         >
           <FaXmark />{' '}
         </button>
@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
       {/* Mobile menu open button */}
       <button
         onClick={() => setMenuOpen(true)}
-        className="block md:hidden text-2xl"
+        className="block text-2xl md:hidden"
       >
         <FaBarsStaggered />
       </button>
