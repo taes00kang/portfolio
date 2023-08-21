@@ -14,7 +14,7 @@ export const ProjectCard: React.FC<Props> = ({ project }) => {
         <img
           src={project.image}
           alt={project.id}
-          className="overflow-clip duration-[16000ms] ease-in-out group-hover:-translate-y-[92%]"
+          className="w-full overflow-clip duration-[12000ms] ease-in-out group-hover:-translate-y-[80%]"
         />
       </div>
       {/* Project Info */}
