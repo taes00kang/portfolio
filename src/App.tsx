@@ -1,11 +1,11 @@
 import { Navbar, Footer } from './components';
-import { Hero, About, Portfolio, Contact } from './sections';
+import { Home, About, Portfolio, Contact } from './sections';
 
 export function App() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Home />
       <About />
       <Portfolio />
       <Contact />

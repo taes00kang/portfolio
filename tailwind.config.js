@@ -9,7 +9,7 @@ export default {
         mulish: ['Mulish', 'sans-serif'],
       },
       backgroundImage: {
-        avatar: "url('/src/assets/images/avatar.png')",
+        avatar: "url('/images/avatar.png')",
       },
       colors: {
         brand: {

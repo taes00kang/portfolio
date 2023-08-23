@@ -10,8 +10,8 @@ export const Portfolio: React.FC = () => {
       </div>
       {/* Project List Start */}
       <div className="flex w-full flex-col gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
       {/* Project List End */}

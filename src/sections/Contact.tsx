@@ -1,6 +1,8 @@
 import { FaEnvelopeOpenText, FaLinkedin } from 'react-icons/fa';
+import { m } from 'framer-motion';
 import { Section, HeadingBlue, HeadingBlack, ContactItem } from '../components';
 import { ContactItemProps } from '../constants/interfaces';
+import { listContainer } from '../constants/variants';
 
 const contacts: ContactItemProps[] = [
   {
@@ -22,7 +24,13 @@ export const Contact: React.FC = () => {
     <Section id="contact" className="py-12" removeScreenHeight>
       <HeadingBlue text="contact" />
       <HeadingBlack text="Don't be shy! Hit me up! 👇🏼" />
-      <div className="my-8 flex flex-col gap-12 sm:flex-row sm:items-center">
+      <m.div
+        className="my-8 flex flex-col gap-12 sm:flex-row sm:items-center"
+        variants={listContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         {contacts.map((contact) => (
           <ContactItem
             key={contact.name}
@@ -32,7 +40,7 @@ export const Contact: React.FC = () => {
             icon={contact.icon}
           />
         ))}
-      </div>
+      </m.div>
     </Section>
   );
 };

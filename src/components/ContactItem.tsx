@@ -1,4 +1,6 @@
+import { m } from 'framer-motion';
 import { ContactItemProps } from '../constants/interfaces';
+import { listItem } from '../constants/variants';
 
 export const ContactItem: React.FC<ContactItemProps> = ({
   name,
@@ -7,7 +9,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({
   icon,
 }) => {
   return (
-    <div className="">
+    <m.div variants={listItem}>
       <a
         target="_blank"
         rel="noreferrer"
@@ -22,7 +24,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({
           <p className="text-brand-black/40">{caption}</p>
         </div>
       </a>
-    </div>
+    </m.div>
   );
 };
 

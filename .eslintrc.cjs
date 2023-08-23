@@ -29,5 +29,6 @@ module.exports = {
     'import/no-named-as-default': 0,
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 0,
+    'import/no-absolute-path': 0,
   },
 };

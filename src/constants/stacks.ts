@@ -1,11 +1,12 @@
-import aws from '../assets/images/aws.svg';
-import figma from '../assets/images/figma.svg';
-import nextjs from '../assets/images/nextjs.svg';
-import react from '../assets/images/react.svg';
-import tailwind from '../assets/images/tailwind.svg';
-import typescript from '../assets/images/typescript.svg';
-import vite from '../assets/images/vite.svg';
-import vscode from '../assets/images/vscode.svg';
+/* eslint-disable import/no-absolute-path */
+import aws from '/images/aws.svg';
+import figma from '/images/figma.svg';
+import nextjs from '/images/nextjs.svg';
+import react from '/images/react.svg';
+import tailwind from '/images/tailwind.svg';
+import typescript from '/images/typescript.svg';
+import vite from '/images/vite.svg';
+import vscode from '/images/vscode.svg';
 
 const stacks = [
   { name: 'react', image: react },

@@ -1,12 +1,24 @@
+import { m } from 'framer-motion';
+import { fadeInUp } from '../constants/variants';
+
 interface Props {
   text: string;
 }
 
 export const HeadingBlue: React.FC<Props> = ({ text }) => {
   return (
-    <h3 className="text-base font-bold uppercase text-brand-blue sm:text-lg">
+    <m.h3
+      className="text-base font-bold uppercase text-brand-blue sm:text-lg"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      transition={{
+        duration: 1,
+      }}
+    >
       {text}
-    </h3>
+    </m.h3>
   );
 };
 

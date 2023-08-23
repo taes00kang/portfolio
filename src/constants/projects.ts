@@ -1,6 +1,6 @@
 import { Project } from './interfaces';
-import dockyard from '../assets/images/dockyard.png';
-import wordle from '../assets/images/wordle.png';
+import dockyard from '/images/dockyard.png';
+import wordle from '/images/wordle.png';
 
 const projects: Project[] = [
   {

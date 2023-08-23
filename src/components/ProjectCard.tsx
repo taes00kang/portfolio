@@ -1,14 +1,29 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { m } from 'framer-motion';
 import { Project } from '../constants/interfaces';
 import { LinkButton } from './LinkButton';
+import { fadeInUp } from '../constants/variants';
 
 interface Props {
   project: Project;
+  index: number;
 }
 
-export const ProjectCard: React.FC<Props> = ({ project }) => {
+export const ProjectCard: React.FC<Props> = ({ project, index }) => {
   return (
-    <div className="flex h-full w-full flex-col gap-6 rounded-xl bg-white p-4 shadow-md shadow-gray-200 sm:p-8 lg:h-[400px] lg:flex-row">
+    <m.div
+      className={`flex h-full w-full flex-col gap-6 rounded-xl bg-white p-4 shadow-md shadow-gray-200 sm:p-8 lg:h-[400px]  ${
+        index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+      }`}
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      transition={{
+        duration: 1,
+        delay: 0.5,
+      }}
+    >
       {/* Project image */}
       <div className="group aspect-[16/9] w-full overflow-hidden rounded-xl shadow-md shadow-gray-200 lg:h-full lg:max-w-[530px]">
         <img
@@ -44,7 +59,7 @@ export const ProjectCard: React.FC<Props> = ({ project }) => {
           />
         </div>
       </div>
-    </div>
+    </m.div>
   );
 };
 
