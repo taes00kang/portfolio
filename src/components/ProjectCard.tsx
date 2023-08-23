@@ -25,13 +25,18 @@ export const ProjectCard: React.FC<Props> = ({ project, index }) => {
       }}
     >
       {/* Project image */}
-      <div className="group aspect-[16/9] w-full overflow-hidden rounded-xl shadow-md shadow-gray-200 lg:h-full lg:max-w-[530px]">
+      <a
+        className="group aspect-[16/9] w-full overflow-hidden rounded-xl shadow-md shadow-gray-200 lg:h-full lg:max-w-[530px]"
+        href={project.demo}
+        rel="noreferrer"
+        target="_blank"
+      >
         <img
           src={project.image}
           alt={project.id}
           className="w-full overflow-clip duration-[12000ms] ease-in-out group-hover:-translate-y-[80%]"
         />
-      </div>
+      </a>
       {/* Project Info */}
       <div className="flex w-full flex-1 flex-col items-center px-4 md:px-8 md:py-4">
         <p className="text-xl font-bold lg:text-lg">{project.name}</p>
