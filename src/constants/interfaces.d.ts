@@ -6,6 +6,7 @@ export interface Project {
   image: string;
   repo: string;
   demo: string;
+  themeColor: string[];
 }
 
 export interface ContactItemProps {

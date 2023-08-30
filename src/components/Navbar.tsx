@@ -15,7 +15,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="shadow-grey-400 fixed z-10 flex w-full items-center justify-between bg-white px-8 py-4 shadow-md sm:px-12 sm:py-6">
+    <div className="shadow-grey-400 fixed z-50 flex w-full items-center justify-between bg-white px-8 py-4 shadow-md sm:px-12 sm:py-6">
       <div className="text-lg font-bold md:text-xl">Taesoo.Kang</div>
       <ul
         className={`-left-full top-0 flex items-center gap-6 text-lg font-semibold duration-300 ease-in max-md:absolute max-md:z-20 max-md:h-screen max-md:w-full max-md:flex-col max-md:justify-center max-md:gap-12 max-md:bg-white max-md:transition-transform ${
