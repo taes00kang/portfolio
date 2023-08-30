@@ -69,7 +69,7 @@ export const ProjectCard: React.FC<Props> = ({ project, index }) => {
           <LinkButton link={project.repo} name="code" icon={<FaGithub />} />
           <LinkButton
             link={project.demo}
-            name="demo"
+            name="live"
             icon={<FaExternalLinkAlt />}
           />
         </div>

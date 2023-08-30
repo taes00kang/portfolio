@@ -38,7 +38,7 @@ const projects: Project[] = [
     image: wordle,
     repo: 'https://github.com/taesookang/wordle',
     demo: 'https://wordlebytaesoo.vercel.app/',
-    themeColor: ['#1D1D1D', '#FFFFFF'],
+    themeColor: ['#EAE9E9', '#3A3A3C'],
   },
 ];
 
